@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        float num = scan.newFloat();
+        float num = scan.nextFloat();
         System.out.println(num * 115 / 100);
     }
 }
