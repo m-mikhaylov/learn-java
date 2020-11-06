@@ -3,6 +3,8 @@
 
 public class Main {
     public static void main(String[] args) {
-        //напишите тут ваш код
+        int a = 2;
+        int b = 5;
+        String s = "string";
     }
 }
