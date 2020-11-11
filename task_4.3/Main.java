@@ -17,6 +17,16 @@
 
 public class Main {
     public static void main(String[] args) {
+        
+        Cat cat1 = new Cat();
+        cat1.age= 1;
+        cat1.weight= 2;
+        cat1.strength=3;
+        Cat cat2 = new Cat();
+        cat2.age= 2;
+        cat2.weight= 2;
+        cat2.strength=3;
+        System.out.println(cat1.fight(cat2));
 
     }
 }
@@ -30,6 +40,8 @@ class Cat {
     }
 
     public boolean fight(Cat anotherCat) {
-        //напишите тут ваш код
+        return this.strength > anotherCat.strength || 
+            this.strength == anotherCat.strength && this.weight > anotherCat.weight ||
+            this.strength == anotherCat.strength && this.weight == anotherCat.weight && this.age < anotherCat.age;
     }
 }
