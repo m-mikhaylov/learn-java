@@ -9,7 +9,7 @@ public class Main {
         boolean res = false;
         
 
-        for (int i = 1; i < nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {
             if (nums[i] == 5) {
                 res = true;
                 break;
