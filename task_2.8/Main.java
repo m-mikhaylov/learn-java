@@ -4,7 +4,10 @@
 
 public class Main {
     public static void main(String[] args) {
-        //напишите тут ваш код
+        int nums[] = {2,3,4,5};
+        int res = 1;
+        for (int i = 0; i < nums.length; i++) res *= nums[i];
+        System.out.println(res);
 
     }
 }
