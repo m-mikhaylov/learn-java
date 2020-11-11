@@ -19,6 +19,24 @@ public class Main {
 }
 
 public class Dog {
-    //напишите тут ваш код
+    private String name;
+    private int age;
+    
+    public void setName (Strint name) {
+        this.name = name;
+    }
+    
+    public String getName() {
+        return this.name;
+    }
+    
+    public void setAge (int age) {
+        this.age = age;
+    }
+    
+    public String getAge() {
+        return this.age;
+    }
+    
 }
 
