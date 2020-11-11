@@ -6,7 +6,11 @@
 
 public class Main {
     public static void main(String[] args) {
-        //напишите тут ваш код
-
+        System.out.println(ifSumMore10(1, -3));
+        System.out.println(ifSumMore10(19, -3));
+    }
+    
+    public static boolean ifSumMore10(int n1, int n2) {
+        return n1 + n2 > 10;
     }
 }
