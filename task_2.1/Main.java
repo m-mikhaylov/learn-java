@@ -12,8 +12,48 @@
 •	Должны быть выведены все возможные комбинации. */
 
 public class Main {
+    public static String[] mama = {"Мама", "Мыла", "Раму"};
+    
     public static void main(String[] args) {
-        //напишите тут ваш код
-
+        int[] arr = new int[mama.length];
+        Rec(arr);
+    }
+    
+    
+    public static void Rec(int[] array) {
+        int zidx = zeroIndex(array);
+        if (zidx < 0) {
+            for (int i = 0; i < array.length; i++)
+                System.out.print(mama[array[i]-1]);
+            System.out.println();
+            return;
+        }
+        
+        for (int i = 1; i <= array.length; i++) {
+            if (!hasNum(array, i)) {
+                array[zidx] = i;
+                Rec(array);
+                array[zidx] = 0;
+            }
+        }
+        
+    }
+    
+    public static boolean hasNum(int[] array, int num) {
+        for (int i= 0; i < array.length; i++) {
+            if (array[i] == num) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    
+    public static int zeroIndex(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == 0) return i;
+        }
+        return -1;
     }
 }
+
