@@ -8,17 +8,15 @@
 
 public class Main{
     public static void main(String[] args) {
-        Horse horse = new Horse();
+        Horse horse = new Horse("Бьюти", "Пегая", 10);
         horse.run();
-        Pegasus pegasus = new Pegasus();
+        Pegasus pegasus = new Pegasus("Икар", "Мифическая", 1001);
         pegasus.fly();
     }
 }
 
 
-
-
-abstract class Animal implements AnimalInterface{
+abstract class Animal {
     private String nickname;
     private String breed;
     private int age;
@@ -36,9 +34,16 @@ abstract class Animal implements AnimalInterface{
 
 
 class Horse extends Animal {
+    public Horse(String nickname, String breed, int age) {
+        super(nickname, breed, age); }   
+        
     public void run(){ System.out.println("Игого, я поскакал(а)"); }    
 }
 
 class Pegasus extends Horse {
+     public Pegasus(String nickname, String breed, int age) {
+        super(nickname, breed, age); }
+        
     public void fly(){ System.out.println("Игого, я полетел(а)");  } 
 }
+
