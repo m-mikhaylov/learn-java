@@ -10,6 +10,9 @@
 •	Дополнительные классы или интерфейсы создавать нельзя.
 */
 
+import java.awt.*;
+import java.applet.*;
+
 public class Main {
     public static void main(String[] args){
     }
@@ -19,8 +22,10 @@ interface Animal {
     Color getColor();
 }
     
-class Fox {
+class Fox implements Animal {
     public String getName() {
         return "Fox";
     }
+    
+    public Color getColor() {return Color.red;}
 }
