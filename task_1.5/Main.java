@@ -15,7 +15,7 @@ public class Main {
     public static void main(String[] args) {
        Scanner scan = new Scanner(System.in);
        float TC = scan.nextFloat();
-       float TF = (9. / 5) * TC + 32;
+       float TF = (float)(9. / 5) * TC + 32;
        System.out.println(TF); 
     }
 }
